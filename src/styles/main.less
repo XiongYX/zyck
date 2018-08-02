@@ -1,0 +1,672 @@
+@import 'iview-theme.less';
+ul,
+ol {
+    list-style: none;
+}
+.clearfix:after{content:'\0020'; display:block; clear:both; height:0;}
+.clearfix{zoom:1;}
+[v-cloak] {
+    display: none;
+}
+.clearfix{
+    zoom:1;
+    &:after {
+        content:'\0020';
+        display:block;
+        clear:both;
+        height:0;
+    }
+}
+body {
+    min-width: 1180px;
+}
+//footer固定底部布局
+html,body,.ch-sticky {
+    height: 100%;
+}
+.layout {
+    min-width: 1180px;
+    min-height: 100%;
+    padding-bottom: 51px;
+    background: #f5f7f9;
+    position: relative;
+    overflow: hidden;
+}
+.layout-nav {
+    width: 420px;
+    margin: 0 auto;
+    margin-right: 20px;
+}
+.ivu-layout-footer-wrapper {
+    position: relative;
+    margin-top: -51px;
+    border-top: 1px solid @border-color-split;
+    background: #fff;
+    .ivu-layout-footer {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 50px;
+        color: @subsidiary-color;
+        background: #fff;
+        text-align: center;
+        a {
+            color: @subsidiary-color;
+        }
+        .call-title {
+            margin-left: 40px;
+        }
+        .call-num {
+            color: #4dad8d;
+        }
+    }
+}
+.ivu-layout-header {
+    position: relative;
+    padding: 0;
+    background: @primary-color;
+    .cover-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+    .ivu-menu {
+        width: 1180px;
+        margin: 0 auto;
+        font-size: 16px;
+        a {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .ivu-menu-item-selected {
+        a {
+            color: #fff;
+        }
+    }
+    .zyck-nav {
+        &.ivu-menu-item-selected {
+            border-bottom: 2px solid #fff;
+        }
+    }
+    .ivu-menu-submenu {
+        padding: 0;
+        margin: 0 20px;
+        height: 48px;
+        &.ivu-menu-item-active {
+            .zyck-menu-title{
+                border-bottom: 2px solid #fff;
+            }
+        }
+        .ivu-icon {
+                margin-right: 0;
+            }
+        .ivu-select-dropdown {
+            width: 88px;
+        }
+        .zyck-menu-title {
+            display: inline-block;
+            height: 48px;
+        }
+    }
+    .ivu-menu-item {
+        font-size: 16px;
+        padding: 0;
+        margin: 0 18px;
+        height: 48px;
+        .logo {
+            margin-right: 10px;
+            cursor: default;
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+    .ivu-select-dropdown{
+        .ivu-menu-drop-list{
+            .ivu-menu-item {
+                padding: 0;
+            }
+            a {
+                padding: 7px 16px 8px;
+                color: @text-color;
+            }
+        }
+        .ivu-menu-item-selected{
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .username {
+        a{
+            padding-left: 10px;
+            max-width: 240px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .ivu-icon {
+            margin-right: 10px;
+            vertical-align: -5px;
+        }
+    }
+}
+.ivu-form-item {
+    margin-bottom: 10px;
+}
+.no-footer {
+    .ivu-modal-footer {
+        display: none;
+    }
+}
+.ivu-modal {
+    top: 130px;
+}
+.zyck-modal-con {
+    padding: 0 50px;
+    .zyck-modal-title {
+        margin-top: 10px;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        .bkpc {
+            color: @primary-color;
+        }
+    }
+    .zyck-modal-subtitle {
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: @subsidiary-color;
+        text-align: center;
+    }
+    .zyck-yhxm {
+        line-height: 34px;
+        .zyck-yhxm-sub {
+            margin-left: 5px;
+            font-size: 12px;
+            color: #999;
+        }
+    }
+    .form-item-subtext{
+        font-size: 12px;
+        color: #999;
+    }
+    .zyck-sub {
+        position: relative;
+        top: 2px;
+        margin-left: 5px;
+        font-size: 12px;
+        color: #999;
+    }
+}
+.ivu-tabs-nav-container:focus {
+    outline: 0;
+    .ivu-tabs-tab-focused {
+        border-color: @primary-color !important;
+    }
+}
+.ivu-form-item-error-tip {
+    position: static;
+}
+.ivu-tabs-nav .ivu-tabs-tab:hover,.ivu-tabs-nav .ivu-tabs-tab:active {
+    color: @primary-color;
+}
+.ivu-tabs-bar {
+    .tips {
+        display: inline-block;
+        width: 275px;
+        font-size: 12px;
+        color: @warning-color;
+    }
+}
+.bkpc-card {
+    .ivu-card {
+        width:280px; margin: 30px auto 50px auto; border-radius: 0;
+        &.first-card {
+            border-top: 2px solid #f8132a;
+            .card-title {
+                color: #f8132a;
+            }
+        }
+        &.second-card {
+            border-top: 2px solid #6cc835;
+            .card-title {
+                color: #6cc835;
+            }
+        }
+        &.third-card {
+            border-top: 2px solid #0097fa;
+            .card-title {
+                color: #0097fa;
+            }
+        }
+    }
+    .card-con{
+        text-align: center;
+    }
+    .card-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .card-subtext {
+        margin-bottom: 15px;
+        color: @subsidiary-color;
+    }
+    .card-num {
+        margin-bottom: 20px;
+        font-size: 36px;
+        color: @primary-color;
+    }
+    .ivu-btn {
+        margin-bottom: 20px;
+    }
+}
+.ivu-btn {
+    border-radius: 0;
+}
+.zyck-tag {
+    height: 30px;
+    line-height: 30px;
+    background: @primary-color;
+    border: 1px solid @primary-color;
+    .ivu-tag-text {
+        color: #fff;
+    }
+    .ivu-icon-ios-close-empty {
+        color: #fff;
+        font-size: 16px;
+    }
+}
+.zyck-item-text {
+    line-height: 34px;
+}
+.zyck-main-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+}
+.zyck-sub-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: @subsidiary-color;
+    text-align: center;
+}
+.ivu-rate {
+    .ivu-rate-star {
+        margin-right: 2px;
+    }
+    .ivu-rate-text {
+        margin-left: 0;
+    }
+}
+td.zyck-text-center {
+    text-align: center;
+}
+td.zyck-text-right {
+    text-align: right;
+}
+td.zyck-text-top {
+    vertical-align: top;
+}
+.zyck-cp-con {
+    width: 880px;
+    margin: 40px auto;
+    li {
+        float: left;
+        height: 36px;
+        line-height: 36px;
+        margin: 10px 5px;
+        padding: 0 15px;
+        font-size: 16px;
+        border: 1px solid #dddee1;
+        border-radius: 18px;
+        cursor: pointer;
+        &.seach-list-item-checked, &:hover{
+            border: 1px solid @primary-color;
+            background: @primary-color;
+            color: #fff;
+        }
+        &.seach-list-item-disabled{
+            border-color: @border-color-base;
+            background: @background-color-base;
+            color: @btn-disable-color;
+            cursor: @cursor-disabled;
+        }
+    }
+}
+.zyck-edit-cp-con {
+    li {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin: 5px 10px 5px 0;
+        padding: 0 12px;
+        font-size: 14px;
+        border: 1px solid #dddee1;
+        border-radius: 15px;
+        cursor: pointer;
+        &.seach-list-item-checked, &:hover{
+            border: 1px solid @primary-color;
+            background: #fff;
+            color: @primary-color;
+        }
+    }
+}
+.ivu-btn-text:focus {
+    box-shadow: none;
+}
+.fx-color1 {
+    color: #45bb93;
+}
+.fx-color2 {
+    color: #ff9900;
+}
+.fx-color3 {
+    color: #F56C6C;
+}
+.fx-color4 {
+    color: #ff0000;
+}
+.zyck-tzy-seach {
+    margin-bottom: 20px;
+}
+.zyck-seach-more {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    background: #f7f7f7;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.zyck-zy-list {
+    position: fixed;
+    right: 0;
+    top: 104px;
+    background: #fff;
+    z-index: 100;
+    box-shadow: -1px 2px 5px #bbb;
+    .zy-list-toggle {
+        width: 40px;
+        padding: 15px 10px;
+        line-height: 1.5;
+        text-align: center;
+        background: @primary-color;
+        color: #fff;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .zy-list-content {
+        position: relative;
+        .zy-list-content_button {
+            position: absolute;
+            width: 40px;
+            left: -39px;
+            top: 0;
+            padding: 20px 10px;
+            text-align: center;
+            line-height: 1.5;
+            background: @primary-color;
+            color: #fff;
+            border: 1px solid #e9eaec;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .zy-list-table {
+        width: 350px;
+        border-collapse: collapse;
+        tr {
+            border: 1px solid #e9eaec;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            font-weight: 700;
+            .sub-th {
+                color: #999;
+            }
+        }
+        td {
+            line-height: 1.5;
+            padding: 8px 8px;
+            &:nth-child(2) {
+                padding: 15px 8px;
+            }
+            &.button-warp {
+                padding: 20px;
+            }
+        }
+    }
+}
+.ivu-btn-text {
+    padding: 0;
+}
+.text-nowarp {
+    white-space: nowrap;
+}
+.zyck-lxxx {
+    color: #f43f43;
+}
+.ivu-modal-confirm-footer button {
+    border-radius: 4px;
+}
+.ivu-modal-confirm-footer button + button{
+    margin-left: 15px;
+}
+.zyck-title-h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+.ivu-progress-inner,
+.ivu-progress-bg {
+    border-radius: 0; 
+}
+.ivu-progress-text-inner {
+    color: #c3c3c3;
+}
+.zyck-yxmyd {
+    border-bottom: 1px solid #ebebeb;
+    padding: 16px 0;
+    &:first-child {
+        padding-top: 0;
+    } 
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    } 
+}
+.zyck-yxmyd-left {
+    text-align: center;
+}
+.zyck-yxmyd-title {
+    font-size: 18px;
+}
+.zyck-yxmyd-pf {
+    font-size: 36px;
+    color: #f26317;
+    font-weight: 700;
+}
+.zyck-yxmyd-num {
+    color: #999;
+}
+.ivu-rate-title {
+    font-size: 14px;
+    line-height: 18px;
+    color: #c3c3c3; 
+}
+.detail-rate {
+    height: 18px;
+    line-height: 18px;
+    .ivu-rate-star:before, .ivu-rate-star-content:before {
+        color: #c3c3c3;
+    }
+}
+.zyck-zymyd {
+    margin-bottom: 20px;
+    .zyck-zymyd-title {
+        font-size: 16px;
+    }
+    .zyck-zymyd-pf {
+        font-size: 20px;
+        color: #f26317;
+        font-weight: 700;
+        margin-bottom: 10px;
+        .ivu-rate {
+            margin-right: 5px;
+        }
+        .zyck-zymyd-num {
+            font-weight: 400;
+            font-size: 14px;
+            color: #999; 
+        }
+    }
+}
+.zyck-zymyd-modal {
+    .ivu-modal-body {
+        padding-bottom: 0;
+    }
+}
+.zyck-hover {
+    cursor: pointer;
+}
+.zytable-tag {
+    .zytable-tag-item {
+        display: inline;
+        .ivu-tag {
+            height: 16px;
+            line-height: 16px;
+            padding: 0 5px;
+            border: 1px solid #70A1B6;
+            border-radius: 0;
+            background: none;
+            color: #62affd;
+            .ivu-tag-text {
+                color: #70A1B6;
+            }
+        }
+    }
+}
+.zyck-tips-modal-small {
+    border: 1px solid #daf1e9;
+    background-color: #ecf8f4;
+    padding: 8px 16px;
+    line-height: 16px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: @subsidiary-color;
+    .strong {
+        color: @primary-color;
+    }
+}
+.zyck-tips-modal {
+    margin-top: 10px;
+    .tip-title {
+        font-weight: 700;
+    }
+    p {
+        margin-top: 5px;
+        color: @subsidiary-color;
+    }
+}
+.zyck-tips {
+    padding: 10px 20px;
+    .tip-title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    p {
+        margin-top: 5px;
+        line-height: 1.8;
+        color: @subsidiary-color;
+    }
+}
+.ivu-input-wrapper {
+    .ivu-icon-ios-close {
+        cursor: pointer;
+    }
+}
+.ivu-select-item {
+    .zyck-select-checked-icon {
+        margin-left: 5px;
+        font-size: 14px;
+        color: @primary-color;
+    }
+}
+.ivu-tag {
+    cursor: default;
+    &:hover{
+        opacity: 1;
+    }
+}
+.ivu-modal-confirm-body-icon-info {
+    color: @link-color;
+}
+.ivu-tooltip-inner {
+    max-width: 520px;
+    background-color: #999;
+}
+.ivu-tooltip-popper[x-placement^="bottom"] .ivu-tooltip-arrow {
+    border-bottom-color: #999;
+}
+// select样式
+.zyck-select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 8px;
+    border-radius: 4px;
+    border: 1px solid #d5d5d5;
+    vertical-align: middle;
+    color: #666;
+    outline:none;
+}
+// 购买会员
+.member-buy-header{
+    height: 100px;
+    text-align: center;
+    background-color: @primary-color ;
+    img{
+     display: inline-block; 
+     vertical-align: middle;
+    }
+    .summary {
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        text-align: left;
+        padding-left: 15px;
+        font-size: 14px;
+        h2{ font-size: 26px;  margin-top: 32px;}
+    }
+}
+.buy-box { padding: 10px 30px;}
+.buy-box .ivu-alert-desc{ line-height: 26px;  margin-top: 5px;}
+.buy-box h3{ margin: 5px 0px 15px 0px; }  
+.current-provice-name{ color: @primary-color; margin: 0px 5px; }
+.member-price {
+    padding: 15px 25px;
+    border: solid 1px @border-color-split;
+}
+.price-number{
+    font-size: 54px; font-family: "Avenir", arial, sans-serif; font-style: normal; color: @error-color;
+}
+.pirce-currency{ color: @error-color; font-size: 16px;}
+.member-price .summary{ color: @legend-color;}
+.ivu-progress-success .ivu-progress-bg {
+    background-color: #2db7f5;
+}
